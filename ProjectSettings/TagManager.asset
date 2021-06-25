@@ -12,6 +12,7 @@ TagManager:
   - poisonsllime
   - iceorb
   - poisonorb
+  - darkorb
   layers:
   - Default
   - TransparentFX

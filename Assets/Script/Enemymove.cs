@@ -11,7 +11,7 @@ public class Enemymove : MonoBehaviour
     private playermove player = null;
 
     [SerializeField]
-    private float speed = 0.3f;
+    private float speed = 0.1f;
 
     void Start()
     {

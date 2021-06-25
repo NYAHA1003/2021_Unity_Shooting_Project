@@ -10,7 +10,7 @@ public class IceDamage : MonoBehaviour
 
 
     [SerializeField]
-    private int hp = 3;
+    private int hp = 5;
     [SerializeField]
     private int score = 10;
 
@@ -29,6 +29,10 @@ public class IceDamage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isDead) return;
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
         if (collision.CompareTag("iceorb"))
         {
             if (isDamaged) return;

@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         minPosition = new Vector2(-1.8f, -0.8f);
         maxPosition = new Vector2(1.8f, 0.8f);
         playerminPosition = new Vector2(-1.8f, -0.8f);
-        playermaxPosition = new Vector2(-0.8f, 0.8f);
+        playermaxPosition = new Vector2(0.8f, 0.8f);
         StartCoroutine(SpawnSlime());
         StartCoroutine(SpawnFireSlime());
         StartCoroutine(SpawnIceSlime());
@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             randomY = Random.Range(-0.85f, 0.85f);
-            randomTime = Random.Range(6f, 9f);
+            randomTime = Random.Range(7f, 10f);
             Instantiate(slime, new Vector2(2.3f, randomY), Quaternion.identity);
             yield return new WaitForSeconds(randomTime);
         }
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             randomY = Random.Range(-0.85f, 0.85f);
-            randomTime = Random.Range(6f, 11f);
+            randomTime = Random.Range(7f, 10f);
             Instantiate(fireSlime, new Vector2(2.3f, randomY), Quaternion.identity);
             yield return new WaitForSeconds(randomTime);
         }
@@ -96,7 +96,7 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             randomY = Random.Range(-0.85f, 0.85f);
-            randomTime = Random.Range(6f, 11f);
+            randomTime = Random.Range(7f, 10f);
             Instantiate(iceSlime, new Vector2(2.3f, randomY), Quaternion.identity);
             yield return new WaitForSeconds(randomTime);
         }
@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             randomY = Random.Range(-0.85f, 0.85f);
-            randomTime = Random.Range(6f, 11f);
+            randomTime = Random.Range(7f, 10f);
             Instantiate(poisonSlime, new Vector2(2.3f, randomY), Quaternion.identity);
             yield return new WaitForSeconds(randomTime);
         }

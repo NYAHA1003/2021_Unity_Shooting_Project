@@ -15,7 +15,7 @@ public class SwitchButton : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             mod++;
-            if (mod >= 3)
+            if (mod >= 4)
             {
                 mod = 0;
             }

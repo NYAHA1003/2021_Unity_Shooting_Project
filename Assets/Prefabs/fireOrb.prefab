@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2590969486251128427}
   - component: {fileID: 2590969486251128426}
   - component: {fileID: 2590969486251128425}
-  - component: {fileID: 2590969486251128404}
   - component: {fileID: 2590969486251128406}
   - component: {fileID: 2590969486251128405}
   m_Layer: 0
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2590969486251128424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.467, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,23 +104,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2590969486251128404
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2590969486251128424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e44fa9d031322746817f8a5e51b43cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orbspeed: 3.7
-  inputorbup: 0
-  inputorbdown: 0
-  inputorbleft: 0
-  inputorbright: 0
 --- !u!50 &2590969486251128406
 Rigidbody2D:
   serializedVersion: 4

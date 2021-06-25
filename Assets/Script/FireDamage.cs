@@ -8,7 +8,7 @@ public class FireDamage : MonoBehaviour
     private GameManager gameManager = null;
 
     [SerializeField]
-    private int hp = 3;
+    private int hp = 5;
     [SerializeField]
     private int score = 10;
 
@@ -27,6 +27,10 @@ public class FireDamage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isDead) return;
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
         if (collision.CompareTag("fireOrb"))
         {
             if (isDamaged) return;

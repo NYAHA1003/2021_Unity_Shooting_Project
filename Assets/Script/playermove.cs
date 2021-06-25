@@ -19,7 +19,7 @@ public class playermove : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-}
+    }
 
     void Update()
     {
@@ -46,7 +46,7 @@ public class playermove : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isDamaged) return;
+
         if (collision.CompareTag("slime"))
         {
             StartCoroutine(Damaged());
@@ -56,18 +56,14 @@ public class playermove : MonoBehaviour
     private bool isDamaged = false;
     private IEnumerator Damaged()
     {
-        if (!isDamaged)
+        gameManager.Dead();
+        for (int i = 0; i < 3; i++)
         {
-            isDamaged = true;
-            gameManager.Dead();
-            for (int i = 0; i < 3; i++)
-            {
-                spriteRenderer.enabled = false;
-                yield return new WaitForSeconds(0.2f);
-                spriteRenderer.enabled = true;
-                yield return new WaitForSeconds(0.2f);
-            }
-            isDamaged = false;
+            spriteRenderer.enabled = false;
+            yield return new WaitForSeconds(0.2f);
+            spriteRenderer.enabled = true;
+            yield return new WaitForSeconds(0.2f);
         }
+        yield return new WaitForSeconds(1.2f);
     }
 }

@@ -26,6 +26,7 @@ public class OrbMove : MonoBehaviour
         Orb[0].SetActive(true);
         Orb[1].SetActive(false);
         Orb[2].SetActive(false);
+        Orb[3].SetActive(false);
     }
 
     void Update()
@@ -60,21 +61,28 @@ public class OrbMove : MonoBehaviour
             Orb[0].SetActive(false);
             Orb[1].SetActive(true);
             Orb[2].SetActive(false);
-            Debug.Log(switchMod.mod);
+            Orb[3].SetActive(false);
         }
         else if (switchMod.mod == 2)
         {
             Orb[0].SetActive(false);
             Orb[1].SetActive(false);
             Orb[2].SetActive(true);
-            Debug.Log(switchMod.mod);
+            Orb[3].SetActive(false);
+        }
+        else if (switchMod.mod == 3)
+        {
+            Orb[0].SetActive(false);
+            Orb[1].SetActive(false);
+            Orb[2].SetActive(false);
+            Orb[3].SetActive(true);
         }
         else if (switchMod.mod == 0)
         {
             Orb[0].SetActive(true);
             Orb[1].SetActive(false);
             Orb[2].SetActive(false);
-            Debug.Log(switchMod.mod);
+            Orb[3].SetActive(false);
         }
     }
 
